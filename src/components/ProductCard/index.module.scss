@@ -1,0 +1,78 @@
+@import "/src/styles/variables";
+@import "src/styles/_mixin.scss";
+
+.container {
+  box-shadow: 2px 2px 5px $primary-color-extra-dark;
+  padding: 16px;
+  border-radius: 8px;
+  flex: 0 1 30%;
+  background: $primary-color-light;
+
+  .header {
+    display: flex;
+
+    .image {
+      height: 120px;
+      width: 120px;
+      box-shadow: 1px 1px 3px $primary-color-medium;
+      border-radius: 8px;
+    }
+
+    .details {
+      padding: 0 24px;
+
+      .title {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: $primary-color-extra-dark;
+        font-size: 16px;
+      }
+
+      .price {
+        margin-top: 20px;
+        font-style: italic;
+        color: $primary-color-medium;
+        font-size: 28px;
+      }
+    }
+  }
+
+  .seperator {
+    height: 1px;
+    background-color: $primary-color-medium;
+    width: 100%;
+    align-self: center;
+    margin: 12px 0;
+  }
+
+  &:hover {
+    transform: scale(1.04);
+    z-index: 1;
+  }
+
+  @include mobile {
+    flex: 0 1 100%;
+    padding: 8px;
+
+    .header {
+      .image {
+        height: 80px;
+        width: 80px;
+      }
+
+      .details {
+        .title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 200px;
+        }
+
+        .price {
+          font-size: 24px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

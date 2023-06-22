@@ -1,0 +1,59 @@
+@import "src/styles/_variables.scss";
+@import "src/styles/_mixin.scss";
+
+.container {
+    display: flex;
+    gap: 26px;
+    align-self: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    padding: 24px;
+    margin-bottom: 38px;
+
+    .cardBody {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-direction: column;
+
+        .description {
+            text-align: justify;
+            width: 100%;
+            color: $primary-color-extra-dark;
+            font-size: 12px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        .buttonWrapper {
+            // align-self: flex-start;
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    @include mobile {
+        padding: 8px;
+
+        .cardBody {
+            flex-direction: column;
+            justify-content: center;
+
+            .description {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 5;
+                width: 100%;
+                height: 70px;
+            }
+
+            .buttonWrapper {
+                align-self: flex-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import 'src/styles/_variables.scss';
+
+.button {
+    background-color: $primary-color-dark;
+    color: $white;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    width: max-content;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid $primary-color-extra-dark;
+        background-color: $white;
+        color: $primary-color-dark;
+    }
+    &:disabled{
+        opacity: 0.5;
+    }
+}

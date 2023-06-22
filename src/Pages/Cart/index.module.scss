@@ -1,0 +1,23 @@
+@import "src/styles/_variables.scss";
+
+.container {
+    display: flex;
+    gap: 26px;
+    align-self: center;
+    justify-self: center;
+    flex-wrap: wrap;
+    padding: 24px;
+    margin-bottom: 38px;
+
+    .cardBody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        .removeBtn {
+            width: 70%;
+            margin-right: 32px;
+        }
+    }
+}

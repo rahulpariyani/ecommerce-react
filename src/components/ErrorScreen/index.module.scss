@@ -1,0 +1,9 @@
+@import 'src/styles/_variables.scss';
+
+.container {
+    font-size: 32px;
+    font-family: cursive;
+    text-decoration: underline;
+    margin: 90px auto;
+    color: $primary-color-extra-dark;
+}

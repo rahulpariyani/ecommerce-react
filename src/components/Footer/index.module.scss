@@ -1,0 +1,14 @@
+@import 'src/styles/_variables.scss';
+
+.container {
+    background-color: $primary-color-dark;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color: $white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-top: 28px;
+    z-index: 1;
+}
